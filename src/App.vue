@@ -27,9 +27,12 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import "./style/general.scss";
+
+
+
 
 #app{
   margin-top:10px;
