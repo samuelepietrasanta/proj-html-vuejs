@@ -6,14 +6,11 @@
               <li class="p-2" v-for="(item, index) in nav_menu" :key="index">{{item}} <i class="fas fa-chevron-down"></i></li>
           </ul>
       </nav>
-      <div class="language d-flex">
+      <div class="language d-flex align-items-center">
           <img src="../assets/img/en.png" alt="no">
-          <p>{{languages.english.language}} </p>
-          <i class="fas fa-chevron-down "></i>
+          <p class='pt-2'>{{languages.english.language}} </p>
+          <i class="fas fa-chevron-down my_down_arrow "></i>
           <i class="far fa-user-circle ms-2"></i>
-      </div>
-
-      <div class="searchbar d-flex">
           <input type="text" placeholder="Search...">
           <button><i class="fas fa-search"></i></button>
       </div>
@@ -54,6 +51,8 @@ export default {
 
 <style lang="scss">
 
+@import "../style/colors.scss";
+
 header{
     height: 50px;
     padding:25px 125px;
@@ -76,17 +75,28 @@ header{
     }
 
     .language{
-        height: 50px;
-        width:50px;
 
         img{
             width: 25px;
         }
+        p{
+            font-size:0.8rem;
+        }
 
-    }
+        .my_down_arrow{
+            color:$footerColor;
+            font-size: .8rem;
+        }
 
-    .searchbar{
-        height: 25px;
+        button{
+            background-color: transparent;
+        }
+
+        input{
+            border: none;
+            margin-left:10px;
+        }
+
     }
 }
 
